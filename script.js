@@ -196,13 +196,42 @@ whitenoiseVolumeRange.onchange = function () {
 
 function resetall() {
   rainVolumeRange.value = 0;
+  document.getElementById("rainicon").style.opacity = 0;
+  rainSound.volume = 0;
+
   thunderVolumeRange.value = 0;
+  document.getElementById("thundericon").style.opacity = 0;
+  thunderSound.volume = 0;
+
   wavesVolumeRange.value = 0;
+  document.getElementById("wavesicon").style.opacity = 0;
+  wavesSound.volume = 0;
+
   windVolumeRange.value = 0;
+  document.getElementById("windicon").style.opacity = 0;
+  windSound.volume = 0;
+
   fireVolumeRange.value = 0;
+  document.getElementById("fireicon").style.opacity = 0;
+  fireSound.volume = 0;
+
   birdsVolumeRange.value = 0;
+  document.getElementById("birdsicon").style.opacity = 0;
+  birdsSound.volume = 0;
+
   cricketsVolumeRange.value = 0;
+  document.getElementById("cricketsicon").style.opacity = 0;
+  cricketsSound.volume = 0;
+
   coffeeshopVolumeRange.value = 0;
+  document.getElementById("coffeeshopicon").style.opacity = 0;
+  coffeeshopSound.volume = 0;
+
   singingbowlVolumeRange.value = 0;
+  document.getElementById("singingbowlicon").style.opacity = 0;
+  singingbowlSound.volume = 0;
+
   whitenoiseVolumeRange.value = 0;
+  document.getElementById("whitenoiseicon").style.opacity = 0;
+  whitenoiseSound.volume = 0;
 }
