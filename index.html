@@ -14,49 +14,201 @@
   </head>
 
   <body>
-    <nav class="navbar opacity-25">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img
-            src="/docs/5.3/assets/brand/bootstrap-logo.svg"
-            alt="Bootstrap"
-            width="30"
-            height="24"
-          />
-        </a>
+    <nav class="navbar navbar-light">
+      <div class="container-fluid mt-2">
+        <!--
+        <input
+        type="range"
+        class="form-range ps-5 mainrange"
+        min="0"
+        max="1"
+        step="0.01"
+        id="mainRange"
+        style="width: 200px;"
+        />
+        -->
+        <button class="btn btn-outline-warning mx-5 px-3" onclick="resetall()">Reset</button>
+        <a class="navbar-brand mx-5 ps-5 text-warning" href="#" style=""
+          >Made by @Alperzkn</a
+        >
       </div>
     </nav>
-    <div class="column pt-5">
-      <div class="row pt-5">
-        <div class="col-lg-12 pt-5">
-          <p class="text-center fs-3 textColor p-1 shadow-sm">
-            Your phone distracted you
-            <span id="counterText" class="fw-bold">1</span>
-            <span id="timeText">time</span> since you started working
-          </p>
+    <section>
+      <div class="container">
+        <div class="column">
+          <div class="row pt-5">
+            <div class="col-lg-12 pt-5">
+              <p class="text-center fs-3 textColor p-1 shadow-sm">
+                Your phone distracted you
+                <mark style="border-radius: 5px"
+                  ><span id="counterText" class="fw-bold">1</span></mark
+                >
+                <span id="timeText">time</span> since you started working
+              </p>
+            </div>
+            <div class="d-flex d-flex justify-content-center pt-4">
+              <button
+                id="counterButton"
+                class="btn btn-outline-warning rounded-3 shadow-sm px-3"
+                onclick="counterFunction()"
+              >
+                Checked my phone
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="d-flex d-flex justify-content-center pt-4">
-          <button
-            id="counterButton"
-            class="btn buttonBGcolor rounded-3 text-white shadow-sm"
-            onclick="counterFunction()"
-          >
-            Checked my phone
-          </button>
+        <div class="row d-flex justify-content-center pt-5 pb-5">
+          <div class="col-lg-6">
+            <p class="fs-4 text-center text-white">
+              You can increase your focus by listening sounds below.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <section class="pt-5">
-      <div class="row d-flex justify-content-center">
-        <div class="col-lg-6">
-          <p class="fs-4 text-center text-white">
-            You can increase your focus by listening sounds below.
-          </p>
+    </section>
+    <section class="pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-2 text-center" id="rainSection">
+              <i
+                class="bi bi-cloud-rain text-white display-4"
+                id="rainicon"
+              ></i>
+              <h5 class="text-white pt-2">Rain</h5>
+              <input
+                type="range"
+                class="form-range rangestyle customrange"
+                min="0"
+                max="1"
+                step="0.01"
+                id="rainVolumeRange"
+              />
+            </div>
+            <div class="col-lg-2 text-center" id="thunderSection">
+              <i
+                class="bi bi-lightning text-white display-4"
+                id="thundericon"
+              ></i>
+              <h5 class="text-white pt-2">Thunder</h5>
+              <input
+                type="range"
+                class="form-range"
+                min="0"
+                max="1"
+                step="0.01"
+                id="thunderVolumeRange"
+              />
+            </div>
+            <div class="col-lg-2 text-center" id="wavesSection">
+              <i class="bi bi-tsunami text-white display-4" id="wavesicon"></i>
+              <h5 class="text-white pt-2">Waves</h5>
+              <input
+                type="range"
+                class="form-range"
+                min="0"
+                max="1"
+                step="0.01"
+                id="wavesVolumeRange"
+              />
+            </div>
+            <div class="col-lg-2 text-center" id="windSection">
+              <i class="bi bi-wind text-white display-4" id="windicon"></i>
+              <h5 class="text-white">Wind</h5>
+              <input
+                type="range"
+                class="form-range"
+                min="0"
+                max="1"
+                step="0.01"
+                id="windVolumeRange"
+              />
+            </div>
+            <div class="col-lg-2 text-center" id="fireSection">
+              <i class="bi bi-fire text-white display-4" id="fireicon"></i>
+              <h5 class="text-white">Fire</h5>
+              <input
+                type="range"
+                class="form-range"
+                min="0"
+                max="1"
+                step="0.01"
+                id="fireVolumeRange"
+              />
+            </div>
+          </div>
+          <div class="row align-items-center justify-content-center pt-5">
+            <div class="col-lg-2 pt-2 text-center" id="birdsSection">
+              <i class="bi bi-feather text-white display-4" id="birdsicon"></i>
+              <h5 class="text-white">Birds</h5>
+              <input
+                type="range"
+                class="form-range"
+                min="0"
+                max="1"
+                step="0.01"
+                id="birdsVolumeRange"
+              />
+            </div>
+            <div class="col-lg-2 pt-2 text-center" id="cricketsSection">
+              <i
+                class="bi bi-tsunami text-white display-4"
+                id="cricketsicon"
+              ></i>
+              <h5 class="text-white">Crickets</h5>
+              <input
+                type="range"
+                class="form-range"
+                min="0"
+                max="1"
+                step="0.01"
+                id="cricketsVolumeRange"
+              />
+            </div>
+            <div class="col-lg-2 pt-2 text-center" id="coffeshopSection">
+              <i
+                class="bi bi-cup-hot text-white display-4"
+                id="coffeeshopicon"
+              ></i>
+              <h5 class="text-white">Coffee Shop</h5>
+              <input
+                type="range"
+                class="form-range"
+                min="0"
+                max="1"
+                step="0.01"
+                id="coffeeshopVolumeRange"
+              />
+            </div>
+            <div class="col-lg-2 pt-2 text-center" id="singingbowlSection">
+              <i
+                class="bi bi-music-note text-white display-4"
+                id="singingbowlicon"
+              ></i>
+              <h5 class="text-white">Singing Bowl</h5>
+              <input
+                type="range"
+                class="form-range"
+                min="0"
+                max="1"
+                step="0.01"
+                id="singingbowlVolumeRange"
+              />
+            </div>
+            <div class="col-lg-2 pt-2 text-center" id="whitenoiseSection">
+              <i class="bi bi-tv text-white display-4" id="whitenoiseicon"></i>
+              <h5 class="text-white">White Noise</h5>
+              <input
+                type="range"
+                class="form-range"
+                min="0"
+                max="1"
+                step="0.01"
+                id="whitenoiseVolumeRange"
+              />
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <button onclick="playrain()">play</button
-        ><button onclick="playthunder()">play</button>
       </div>
     </section>
 
